@@ -11,11 +11,12 @@ public class Apartments extends Residential {
 		parkingAvailable = false;
 	}
 	
-	public Apartments(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup, int numBathroom, int numBedroom, boolean laundryRoom, int numRentableUnits, double avgUnitSize, boolean parkingAbailable){
-		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subgroup, numBedroom, numBathroom, laundryRoom);
-		this.numRentableUnits = numRentableUnits;
-		this.avgUnitSize = avgUnitSize;
-		this.parkingAvailable = parkingAvailable; 
+	public Apartments(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup){
+		this.projectName = projectName;
+		this.completeAddress = completeAddress;
+		this.totalSquareFeet = totalSquareFeet;
+		this.occupancyGroup = occupancyGroup;
+		this.subgroup = subgroup;
 	}
 	
 	public int getNumRentableUnits() {
@@ -42,7 +43,7 @@ public class Apartments extends Residential {
 	}
 	
 	public String displayData() {
-		String display = super.toString() + "Number of rentable units " + numRentableUnits + " Average unit size: " + avgUnitSize + " Is there parking available: " + parkingAvailable;
+		String display =  "Project Name: " + projectName + " Full Address: " + completeAddress+ " SquareFeet: " + totalSquareFeet + " Occupancy group: " + occupancyGroup + " Subgroup: " + subgroup + " Number of Bedrooms: " + numBedroom + " Number of Bathrooms: " + numBathroom + " Is there a Laundry Room: " + laundryRoom + " Number of rentable units " + numRentableUnits + " Average unit size: " + avgUnitSize + " Is there parking available: " + parkingAvailable;
 		return display;
 	}
 }

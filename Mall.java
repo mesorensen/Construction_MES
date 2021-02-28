@@ -10,10 +10,12 @@ public class Mall extends Business{
 		medianUnitSize = 0.0;
 	}
 	
-	public Mall(String projectedName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup, int numRentedUnits, int numParkingSpaces, double medianUnitSize) {
-		super(projectedName, completeAddress, totalSquareFeet, occupancyGroup, subgroup, numRentedUnits);
-		this.numParkingSpaces = numParkingSpaces;
-		this.medianUnitSize = medianUnitSize;
+	public Mall(String projectedName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup) {
+		this.projectName = projectName;
+		this.completeAddress = completeAddress;
+		this.totalSquareFeet = totalSquareFeet;
+		this.occupancyGroup = occupancyGroup;
+		this.subgroup = subgroup;
 	}
 	
 	public int getNumberRentedUnits() {
@@ -25,7 +27,7 @@ public class Mall extends Business{
 	public double getMedianUnitSize() {
 		return medianUnitSize;
 	}
-	public void setMediamUnitSize(double medianUnitSize ) {
+	public void setMedianUnitSize(double medianUnitSize ) {
 		this.medianUnitSize = medianUnitSize;
 	}
 	public int getNumParkingSpaces() {
@@ -41,7 +43,7 @@ public class Mall extends Business{
 	}
 	
 	public String displayData() {
-		String display = "Project name: " + projectName + " Full addres:  " + completeAddress + " Square Feet: " + totalSquareFeet+ " Occupancy Group: " + occupancyGroup + " Occupancy Subgroup: " + subgroup;
+		String display = "Project name: " + projectName + " Full addres:  " + completeAddress + " Square Feet: " + totalSquareFeet+ " Occupancy Group: " + occupancyGroup + " Occupancy Subgroup: " + subgroup + " Number of rented units: " + numRentedUnits + " Number of rentable units: " + numRentableUnits + " Parking available: " + numParkingSpaces + " Median Unit Size: " + medianUnitSize; 
 		return display;
 	}
 	

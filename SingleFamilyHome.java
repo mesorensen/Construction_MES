@@ -4,12 +4,15 @@ public class SingleFamilyHome extends Residential{
 	
 	public SingleFamilyHome() {
 		super();
-		garage = flase;
+		garage = false;
 	}
 	
-	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup, int numBedroom, int numBathroom, boolean laundryRoom, boolean garage) {
-		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subgroup, numBedroom, numBathroom, laundryRoom);
-		this.garage = garage;
+	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup) {
+		this.projectName = projectName;
+		this.completeAddress = completeAddress;
+		this.totalSquareFeet = totalSquareFeet;
+		this.occupancyGroup = occupancyGroup;
+		this.subgroup = subgroup;
 	}
 	
 	public boolean isGarage() {
@@ -24,7 +27,7 @@ public class SingleFamilyHome extends Residential{
 	}
 	
 	public String displayData() {
-		String display = super.toString() + "There is a garage: ";
+		String display =  "Project Name: " + projectName + " Full Address: " + completeAddress+ " SquareFeet: " + totalSquareFeet + " Occupancy group: " + occupancyGroup + " Subgroup: " + subgroup + " There is a garage: " + garage +  " Number of Bedrooms: " + numBedroom + " Number of Bathrooms: " + numBathroom + " Is there a Laundry Room: " + laundryRoom;
 		return display;
 	}
 	

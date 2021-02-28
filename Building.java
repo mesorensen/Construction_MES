@@ -53,11 +53,11 @@ public class Building {
 	
 	
 	public void draw() {
-		 System.out.println("Drawing code for <<Object Type>>");
+		 System.out.println("Information about Building");
 	}
 	
 	public String displayData() {
-		String display = "Project Name: " + projectName + " Full Address: " + completeAddress+ " SquareFeet: " + totalSquareFeet;  
+		String display = "Project Name: " + projectName + " Full Address: " + completeAddress+ " SquareFeet: " + totalSquareFeet + " Occupancy group: " + occupancyGroup + " Subgroup: " + subgroup;  
 		return display;
 	}
 	

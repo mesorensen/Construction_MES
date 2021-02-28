@@ -20,8 +20,9 @@ public class Business extends Building{
 		this.numRentableUnits = numRentableUnits;
 	}
 	
-	public String toString() {
-		return super.displayData() + " Number of Rentable Units: " + numRentableUnits;
+	public String displayData() {
+		String display = "Project Name: " + projectName + " Full Address: " + completeAddress+ " SquareFeet: " + totalSquareFeet + " Occupancy group: " + occupancyGroup + " Subgroup: " + subgroup + " Number of Rentable Units: " + numRentableUnits;  
+		return display;
 	}
 	
 } 

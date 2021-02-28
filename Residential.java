@@ -10,11 +10,12 @@ public class Residential extends Building{
 		laundryRoom = false;
 	}
 	
-	public Residential(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup, int numBedroom, int numBathroom) {
-		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subgroup);
-		this.numBedroom = numBedroom;
-		this.numBathroom = numBathroom;
-		this.laundryRoom = laundryRoom;
+	public Residential(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup) {
+		this.projectName = projectName;
+		this.completeAddress = completeAddress;
+		this.totalSquareFeet = totalSquareFeet;
+		this.occupancyGroup = occupancyGroup;
+		this.subgroup = subgroup;
 	}
 	
 	public int getNumBedroom() {
@@ -36,7 +37,8 @@ public class Residential extends Building{
 		this.laundryRoom = laundryRoom;
 	}
 	
-	public String toString() {
-		return super.displayData() + " Number of Bedrooms: " + numBedroom + " Number of Bathrooms: " + numBathroom + " Is there a Laundry Room: " + laundryRoom;
+	public String displayData() {
+		String display = "Project Name: " + projectName + " Full Address: " + completeAddress+ " SquareFeet: " + totalSquareFeet + " Occupancy group: " + occupancyGroup + " Subgroup: " + subgroup + " Number of Bedrooms: " + numBedroom + " Number of Bathrooms: " + numBathroom + " Is there a Laundry Room: " + laundryRoom;  
+		return display;
 	}
 }
